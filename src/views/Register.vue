@@ -35,20 +35,20 @@ import { arrowBack, logoFacebook } from 'ionicons/icons'
             <ion-col class="pl-0">
               <ion-label class="block my-1 w-full">First Name</ion-label>
               <ion-row class="flex-nowrap items-center border border-gray-600 rounded-md px-2">
-                <ion-input class="text-sm legacy-input h-10" color="medium" shape="round" placeholder="First Name"></ion-input>
+                <ion-input class="text-sm legacy-input h-10" type="text" color="medium" shape="round" placeholder="First Name"></ion-input>
               </ion-row>
             </ion-col>
             <ion-col class="pr-0">
               <ion-label class="block my-1 w-full">Last Name</ion-label>
               <ion-row class="flex-nowrap items-center border border-gray-600 rounded-md px-2">
-                <ion-input class="text-sm legacy-input h-10" color="medium" shape="round" placeholder="Last Name"></ion-input>
+                <ion-input class="text-sm legacy-input h-10" type="text" color="medium" shape="round" placeholder="Last Name"></ion-input>
               </ion-row>
             </ion-col>
           </ion-row>
           <!-- DOB -->
           <ion-label class="block my-1 w-full">Date of Birth(only for petsitters)</ion-label>
           <ion-row class="flex-nowrap items-center border border-gray-600 rounded-md px-2">
-            <ion-input class="text-sm legacy-input h-10" color="medium" shape="round" placeholder="DD/MM/YYYY"></ion-input>
+            <ion-input class="text-sm legacy-input h-10" type="text" color="medium" shape="round" placeholder="DD/MM/YYYY"></ion-input>
           </ion-row>
           <!-- phone -->
           <ion-label class="block my-1 w-full">Kraj</ion-label>
@@ -76,7 +76,7 @@ import { arrowBack, logoFacebook } from 'ionicons/icons'
             <ion-text class="flex-1 h-0.5 bg-gray-300"></ion-text>
             <ion-text class="flex-1 "></ion-text>
           </ion-col>
-          
+
           <ion-text class="relative block rounded-full text-center border border-gray-500 py-2 items-center">
             <ion-icon class="absolute inset-1.5 left-2 text-3xl text-blue-700" :icon="logoFacebook"></ion-icon>
             Login with Facebook
