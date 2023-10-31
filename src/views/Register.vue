@@ -8,13 +8,16 @@ import {
   IonLabel,
   IonInput,
   IonRow,
-  IonRippleEffect ,
   IonSelect, 
   IonSelectOption,
   IonText,
   IonNote
 } from '@ionic/vue';
 import { arrowBack, logoFacebook } from 'ionicons/icons'
+import { useIonRouter } from '@ionic/vue';
+
+const ionRouter = useIonRouter();
+
 </script>
 
 <template>
@@ -22,50 +25,49 @@ import { arrowBack, logoFacebook } from 'ionicons/icons'
     <ion-content :fullscreen="true">
       <ion-grid class="flex justify-center items-center h-full px-5 max-w-md min-w-fit">
         <ion-col>
-          <ion-icon class="block text-lg" :icon="arrowBack" >
-          </ion-icon>
+          <ion-icon @click="ionRouter.back()" class="block text-lg" :icon="arrowBack"></ion-icon>
           <ion-text class="block font-bold capitalize text-2xl">sign up</ion-text>
           <!-- email -->
           <ion-label class="block my-1 w-full">Email Address</ion-label>
-          <ion-row class="flex-nowrap items-center border border-gray-600 rounded-md px-2">
+          <ion-row class="flex-nowrap items-center border border-gray-400 rounded-md px-2">
             <ion-input class="text-sm legacy-input h-10" type="email" color="medium" shape="round" placeholder="Email Address"></ion-input>
           </ion-row>
           <!-- full name -->
           <ion-row>
             <ion-col class="pl-0">
               <ion-label class="block my-1 w-full">First Name</ion-label>
-              <ion-row class="flex-nowrap items-center border border-gray-600 rounded-md px-2">
+              <ion-row class="flex-nowrap items-center border border-gray-400 rounded-md px-2">
                 <ion-input class="text-sm legacy-input h-10" type="text" color="medium" shape="round" placeholder="First Name"></ion-input>
               </ion-row>
             </ion-col>
             <ion-col class="pr-0">
               <ion-label class="block my-1 w-full">Last Name</ion-label>
-              <ion-row class="flex-nowrap items-center border border-gray-600 rounded-md px-2">
+              <ion-row class="flex-nowrap items-center border border-gray-400 rounded-md px-2">
                 <ion-input class="text-sm legacy-input h-10" type="text" color="medium" shape="round" placeholder="Last Name"></ion-input>
               </ion-row>
             </ion-col>
           </ion-row>
           <!-- DOB -->
           <ion-label class="block my-1 w-full">Date of Birth(only for petsitters)</ion-label>
-          <ion-row class="flex-nowrap items-center border border-gray-600 rounded-md px-2">
+          <ion-row class="flex-nowrap items-center border border-gray-400 rounded-md px-2">
             <ion-input class="text-sm legacy-input h-10" type="text" color="medium" shape="round" placeholder="DD/MM/YYYY"></ion-input>
           </ion-row>
           <!-- phone -->
           <ion-label class="block my-1 w-full">Kraj</ion-label>
-          <ion-row class="flex-nowrap items-center border border-gray-600 rounded-md px-2">
+          <ion-row class="flex-nowrap items-center border border-gray-400 rounded-md px-2">
             <ion-select value="area_code" class="w-24 mr-1" style="min-height: 2rem;" justify="end">
-              <ion-select-option value="apple">+866</ion-select-option>
-              <ion-select-option value="banana">+1</ion-select-option>
-              <ion-select-option value="orange">+44</ion-select-option>
+              <ion-select-option value="usa">+1</ion-select-option>
+              <ion-select-option value="ua">+380</ion-select-option>
+              <ion-select-option value="uk">+44</ion-select-option>
             </ion-select>
             <ion-input class="text-sm legacy-input h-10 border-l border-gray-600" style="padding-left: 5px!important;" color="medium" shape="round" placeholder="DD/MM/YYYY"></ion-input>
           </ion-row>
           <!-- password -->
           <ion-label class="block my-1 w-full">Password</ion-label>
-          <ion-row class="flex-nowrap items-center border border-gray-600 rounded-md px-2">
+          <ion-row class="flex-nowrap items-center border border-gray-400 rounded-md px-2">
             <ion-input class="text-sm legacy-input h-10" type="password" color="medium" shape="round" placeholder="Password"></ion-input>
           </ion-row>
-          <ion-note class="block my-3 text-sm text-center">by signing up you accenpt the <span>terms and conditions</span></ion-note>
+          <ion-note class="block my-3 text-sm text-center">by signing up you accenpt the <span class="underline text-gray-700 active:text-gray-300">terms and conditions</span></ion-note>
           
           <ion-col class="block rounded-full text-center bg-green-500 text-white py-2 active:opacity-90">Sign Up</ion-col>
           

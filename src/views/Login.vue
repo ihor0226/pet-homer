@@ -11,6 +11,9 @@ import {
   IonContent 
 } from '@ionic/vue';
 import { mailOutline, shieldCheckmarkOutline, logoFacebook } from "ionicons/icons"
+import { useIonRouter } from '@ionic/vue';
+
+const ionRouter = useIonRouter();
 
 </script>
 
@@ -21,30 +24,28 @@ import { mailOutline, shieldCheckmarkOutline, logoFacebook } from "ionicons/icon
         <ion-col>
           <ion-text class="block font-bold capitalize text-2xl">sign in</ion-text>
 
-          <ion-text class="block">
-            <span>Enter your details for sign in</span>
-          </ion-text>
+          <ion-text class="block text-gray-400 mb-3">Enter your details for sign in</ion-text>
 
           <!-- email -->
-          <ion-col>
-            <ion-label class="block mb-2 w-full">Email Address</ion-label>
-            <ion-row class="flex-nowrap items-center border border-gray-600 rounded-md px-2">
-              <ion-icon :icon="mailOutline" size="large" class="text-gray-600 text-2xl mr-2">icon</ion-icon>
-              <ion-input type="email" color="medium" shape="round" placeholder="Email Address"></ion-input>
-            </ion-row>
-          </ion-col>
+          <ion-label class="block my-2 w-full">Email Address</ion-label>
+          <ion-row class="flex-nowrap items-center border border-gray-400 rounded-md px-2">
+            <ion-icon :icon="mailOutline" size="large" class="text-gray-400 text-2xl mr-2">icon</ion-icon>
+            <ion-input type="email" color="medium" shape="round" placeholder="Email Address"></ion-input>
+          </ion-row>
 
           <!-- password -->
-          <ion-col>
-            <ion-label class="block mb-2 w-full">Password</ion-label>
-            <ion-row class="flex-nowrap items-center border border-gray-600 rounded-md px-2">
-              <ion-icon :icon="shieldCheckmarkOutline" size="large" class="text-gray-600 text-2xl mr-2">icon</ion-icon>
-              <ion-input type="password" color="medium" shape="round" placeholder="Password"></ion-input>
-            </ion-row>
-          </ion-col>
-          <ion-text class="relative -top-2 block w-full text-end cursor-pointer capitalize">forgot password?</ion-text>
+          <ion-label class="block my-2 w-full">Password</ion-label>
+          <ion-row class="flex-nowrap items-center border border-gray-400 rounded-md px-2">
+            <ion-icon :icon="shieldCheckmarkOutline" size="large" class="text-gray-400 text-2xl mr-2">icon</ion-icon>
+            <ion-input type="password" color="medium" shape="round" placeholder="Password"></ion-input>
+          </ion-row>
 
-          <ion-col class="block rounded-full text-center bg-green-500 text-white py-2 active:opacity-90">Sign Up</ion-col>
+          <ion-text class="relative my-2 block w-full text-end text-gray-400 cursor-pointer capitalize">forgot password?</ion-text>
+
+          <ion-col class="block rounded-full text-center bg-green-500 text-white py-2 mb-2 active:opacity-90">Sign In</ion-col>
+          
+          <ion-col @click="ionRouter.push('/register')" class="block rounded-full text-center bg-green-500 text-white py-2 active:opacity-90">Sign Up</ion-col>
+          
           <ion-col class="flex items-center">
             <ion-text class="flex-1 "></ion-text>
             <ion-text class="flex-1 h-0.5 bg-gray-300"></ion-text>
@@ -52,6 +53,7 @@ import { mailOutline, shieldCheckmarkOutline, logoFacebook } from "ionicons/icon
             <ion-text class="flex-1 h-0.5 bg-gray-300"></ion-text>
             <ion-text class="flex-1 "></ion-text>
           </ion-col>
+          
           <ion-text class="relative block rounded-full text-center border border-gray-500 py-2 items-center">
             <ion-icon class="absolute inset-1.5 left-2 text-3xl text-blue-700" :icon="logoFacebook"></ion-icon>
             Login with Facebook
