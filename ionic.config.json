@@ -1,0 +1,8 @@
+{
+  "name": "pet-homer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite",
+  "id": "0297182a"
+}
